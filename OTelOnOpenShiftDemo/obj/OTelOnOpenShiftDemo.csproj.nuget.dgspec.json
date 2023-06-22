@@ -1,29 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TFSREPO\\SRE\\SRE_POCs\\OTel\\OTelOnOpenShiftDemo\\OTelOnOpenShiftDemo\\OTelOnOpenShiftDemo.csproj": {}
+    "/Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/OTelOnOpenShiftDemo.csproj": {}
   },
   "projects": {
-    "D:\\TFSREPO\\SRE\\SRE_POCs\\OTel\\OTelOnOpenShiftDemo\\OTelOnOpenShiftDemo\\OTelOnOpenShiftDemo.csproj": {
+    "/Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/OTelOnOpenShiftDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TFSREPO\\SRE\\SRE_POCs\\OTel\\OTelOnOpenShiftDemo\\OTelOnOpenShiftDemo\\OTelOnOpenShiftDemo.csproj",
+        "projectUniqueName": "/Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/OTelOnOpenShiftDemo.csproj",
         "projectName": "OTelOnOpenShiftDemo",
-        "projectPath": "D:\\TFSREPO\\SRE\\SRE_POCs\\OTel\\OTelOnOpenShiftDemo\\OTelOnOpenShiftDemo\\OTelOnOpenShiftDemo.csproj",
-        "packagesPath": "C:\\Users\\jmahamoud\\.nuget\\packages\\",
-        "outputPath": "D:\\TFSREPO\\SRE\\SRE_POCs\\OTel\\OTelOnOpenShiftDemo\\OTelOnOpenShiftDemo\\obj\\",
+        "projectPath": "/Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/OTelOnOpenShiftDemo.csproj",
+        "packagesPath": "/Users/jamal/.nuget/packages/",
+        "outputPath": "/Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jmahamoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/jamal/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
-          "http://nugetuk/api/v2": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -126,7 +123,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }

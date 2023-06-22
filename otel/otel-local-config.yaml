@@ -1,29 +1,36 @@
+# /tmp/otel-collector-config.yaml
 receivers:
   otlp:
     protocols:
-      grpc:
       http:
-
+      grpc:
+        
+exporters:
+  logging:
+    loglevel: debug
+    
+  jaeger:
+    endpoint: http://localhost:14250
+  
+  zipkin:
+      endpoint: localhost:9411/api/v2/spans # Replace with your Zipkin endpoint URL
+  
+  prometheus:
+    endpoint: prometheus:8889
+    namespace: default
+    
+    
+    
 processors:
   batch:
-    timeout: 10s
-
-exporters:
-  zipkin:
-      endpoint: http://localhost:9411/api/v2/spans
-  jaeger: 
-      endpoint: http://localhost:16686/api/traces
-
-extensions:
-  health_check:
-  pprof:
-  zpages:
-
+    
 service:
-  extensions: [health_check, pprof, zpages]
   pipelines:
     traces:
       receivers: [otlp]
+      exporters: [logging,jaeger,zipkin]
       processors: [batch]
-      exporters: [zipkin]
-
+    metrics:
+      receivers: [otlp]
+      exporters: [logging]
+      processors: [batch]

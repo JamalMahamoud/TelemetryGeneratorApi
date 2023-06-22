@@ -10,7 +10,7 @@ using Serilog;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+var resource = ResourceBuilder.CreateDefault().AddService(OpenTelemetryConfig.ServiceName);
 //this will be attach to all the logs that goes out  
 
 builder.Services.AddControllers();
@@ -20,20 +20,23 @@ builder.Services.AddSwaggerGen();
  builder.Services.AddOpenTelemetry()
      .WithTracing(tracerProviderBuilder =>
          tracerProviderBuilder
-             .AddOtlpExporter()
              .AddSource(OpenTelemetryConfig.ActivitySource.Name)
-             .ConfigureResource(resource => resource
-                 .AddService(OpenTelemetryConfig.ServiceName))
+             .SetResourceBuilder(resource)
              .AddAspNetCoreInstrumentation()
              .AddJaegerExporter()
+             .AddOtlpExporter(
+                 opt =>
+                 {
+                     opt.Endpoint = new Uri("http://localhost:4317");
+                     opt.Protocol = OtlpExportProtocol.Grpc;
+                 })
              .AddConsoleExporter()
          )
      
      //add metrics
      .WithMetrics(metricProviderBuilder => 
          metricProviderBuilder
-             .ConfigureResource(resource => resource
-                 .AddService(OpenTelemetryConfig.ServiceName))
+             .SetResourceBuilder(resource)
              .AddConsoleExporter()
              .AddOtlpExporter()
              //Meter name come from OpenTelemetryConfig.cs
@@ -45,7 +48,8 @@ builder.Logging.ClearProviders();
 builder.Logging.AddOpenTelemetry(options =>
 {
     options.AddConsoleExporter();
-    
+    options.SetResourceBuilder(resource);
+
 
 });
 
