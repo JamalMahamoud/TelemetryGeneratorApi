@@ -1,0 +1,112 @@
+[2023-06-16 10:15:02.769 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2023-06-16 10:15:02.794 +01:00  INF]  Hosting environment: Development
+[2023-06-16 10:15:02.794 +01:00  INF]  Content root path: D:\TFSREPO\SRE\SRE_POCs\OTel\TelemetryGeneratorApi\OTelDataGenerator\
+[2023-06-16 10:15:02.795 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/swagger/index.html - -
+[2023-06-16 10:15:02.891 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/swagger/index.html - - - 200 - text/html;charset=utf-8 97.2915ms
+[2023-06-16 10:15:03.009 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - -
+[2023-06-16 10:15:03.089 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 80.8216ms
+[2023-06-16 10:15:46.622 +01:00  INF]  Application is shutting down...
+[2023-06-16 10:15:52.277 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2023-06-16 10:15:52.301 +01:00  INF]  Hosting environment: Development
+[2023-06-16 10:15:52.301 +01:00  INF]  Content root path: D:\TFSREPO\SRE\SRE_POCs\OTel\TelemetryGeneratorApi\OTelDataGenerator\
+[2023-06-16 10:15:52.304 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/swagger/index.html - -
+[2023-06-16 10:15:52.393 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/swagger/index.html - - - 200 - text/html;charset=utf-8 91.5155ms
+[2023-06-16 10:15:52.503 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - -
+[2023-06-16 10:15:52.571 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 68.3511ms
+[2023-06-16 10:16:15.704 +01:00  INF]  Application is shutting down...
+[2023-06-16 10:16:23.759 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2023-06-16 10:16:23.759 +01:00  INF]  Application is shutting down...
+[2023-06-16 10:16:23.778 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/swagger/index.html - -
+[2023-06-16 10:16:23.783 +01:00  INF]  Hosting environment: Development
+[2023-06-16 10:16:23.784 +01:00  INF]  Content root path: D:\TFSREPO\SRE\SRE_POCs\OTel\TelemetryGeneratorApi\OTelDataGenerator\
+[2023-06-16 10:16:23.887 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/swagger/index.html - - - 200 - text/html;charset=utf-8 112.2357ms
+[2023-06-16 10:16:30.827 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2023-06-16 10:16:30.843 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/swagger/index.html - -
+[2023-06-16 10:16:30.852 +01:00  INF]  Hosting environment: Development
+[2023-06-16 10:16:30.852 +01:00  INF]  Content root path: D:\TFSREPO\SRE\SRE_POCs\OTel\TelemetryGeneratorApi\OTelDataGenerator\
+[2023-06-16 10:16:30.940 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/swagger/index.html - - - 200 - text/html;charset=utf-8 99.6177ms
+[2023-06-16 10:16:31.041 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - -
+[2023-06-16 10:16:31.144 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 102.9038ms
+[2023-06-16 10:16:53.927 +01:00  INF]  Application is shutting down...
+[2023-06-16 10:17:00.520 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2023-06-16 10:17:00.538 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/swagger/index.html - -
+[2023-06-16 10:17:00.542 +01:00  INF]  Hosting environment: Development
+[2023-06-16 10:17:00.542 +01:00  INF]  Content root path: D:\TFSREPO\SRE\SRE_POCs\OTel\TelemetryGeneratorApi\OTelDataGenerator\
+[2023-06-16 10:17:00.631 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/swagger/index.html - - - 200 - text/html;charset=utf-8 95.6891ms
+[2023-06-16 10:17:00.735 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - -
+[2023-06-16 10:17:00.802 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 66.2739ms
+[2023-06-16 10:18:29.931 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/api/products/0 - -
+[2023-06-16 10:18:29.937 +01:00  INF]  Executing endpoint 'OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator)'
+[2023-06-16 10:18:29.960 +01:00  INF]  Route matched with {action = "GetProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OptelDataGenerator.Product]] GetProduct(Int32) on controller OTelDataGenerator.Controllers.ProductsController (OTelDataGenerator).
+[2023-06-16 10:18:29.972 +01:00  INF]  Executing action method OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator) - Validation state: "Valid"
+[2023-06-16 10:18:29.983 +01:00  INF]  Executed action method OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 5.5862ms.
+[2023-06-16 10:18:29.989 +01:00  INF]  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+[2023-06-16 10:18:29.995 +01:00  INF]  Executed action OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator) in 31.4895ms
+[2023-06-16 10:18:29.996 +01:00  INF]  Executed endpoint 'OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator)'
+[2023-06-16 10:18:29.996 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/api/products/0 - - - 404 - application/problem+json;+charset=utf-8 65.7143ms
+[2023-06-16 10:18:30.728 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/api/products/0 - -
+[2023-06-16 10:18:30.728 +01:00  INF]  Executing endpoint 'OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator)'
+[2023-06-16 10:18:30.728 +01:00  INF]  Route matched with {action = "GetProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OptelDataGenerator.Product]] GetProduct(Int32) on controller OTelDataGenerator.Controllers.ProductsController (OTelDataGenerator).
+[2023-06-16 10:18:30.729 +01:00  INF]  Executing action method OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator) - Validation state: "Valid"
+[2023-06-16 10:18:30.729 +01:00  INF]  Executed action method OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 0.0479ms.
+[2023-06-16 10:18:30.729 +01:00  INF]  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+[2023-06-16 10:18:30.729 +01:00  INF]  Executed action OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator) in 1.0755ms
+[2023-06-16 10:18:30.730 +01:00  INF]  Executed endpoint 'OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator)'
+[2023-06-16 10:18:30.730 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/api/products/0 - - - 404 - application/problem+json;+charset=utf-8 1.8626ms
+[2023-06-16 10:23:02.737 +01:00  INF]  Application is shutting down...
+[2023-06-16 10:23:10.569 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2023-06-16 10:23:10.586 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/swagger/index.html - -
+[2023-06-16 10:23:10.597 +01:00  INF]  Hosting environment: Development
+[2023-06-16 10:23:10.597 +01:00  INF]  Content root path: D:\TFSREPO\SRE\SRE_POCs\OTel\TelemetryGeneratorApi\OTelDataGenerator\
+[2023-06-16 10:23:10.686 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/swagger/index.html - - - 200 - text/html;charset=utf-8 103.0769ms
+[2023-06-16 10:23:10.798 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - -
+[2023-06-16 10:23:10.867 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 69.6355ms
+[2023-06-16 10:23:17.396 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/api/products - -
+[2023-06-16 10:23:17.402 +01:00  INF]  Executing endpoint 'OTelDataGenerator.Controllers.ProductsController.GetProducts (OTelDataGenerator)'
+[2023-06-16 10:23:17.415 +01:00  INF]  Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[OptelDataGenerator.Product]]] GetProducts() on controller OTelDataGenerator.Controllers.ProductsController (OTelDataGenerator).
+[2023-06-16 10:23:17.421 +01:00  INF]  Executing action method OTelDataGenerator.Controllers.ProductsController.GetProducts (OTelDataGenerator) - Validation state: "Valid"
+[2023-06-16 10:23:20.438 +01:00  INF]  Delaying 3
+[2023-06-16 10:23:20.443 +01:00  INF]  Executed action method OTelDataGenerator.Controllers.ProductsController.GetProducts (OTelDataGenerator), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3016.9654ms.
+[2023-06-16 10:23:20.452 +01:00  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[OptelDataGenerator.Product, OTelDataGenerator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2023-06-16 10:23:20.460 +01:00  INF]  Executed action OTelDataGenerator.Controllers.ProductsController.GetProducts (OTelDataGenerator) in 3040.0114ms
+[2023-06-16 10:23:20.460 +01:00  INF]  Executed endpoint 'OTelDataGenerator.Controllers.ProductsController.GetProducts (OTelDataGenerator)'
+[2023-06-16 10:23:20.462 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/api/products - - - 200 - application/json;+charset=utf-8 3066.5539ms
+[2023-06-16 10:23:33.535 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/api/products/0 - -
+[2023-06-16 10:23:33.535 +01:00  INF]  Executing endpoint 'OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator)'
+[2023-06-16 10:23:33.545 +01:00  INF]  Route matched with {action = "GetProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OptelDataGenerator.Product]] GetProduct(Int32) on controller OTelDataGenerator.Controllers.ProductsController (OTelDataGenerator).
+[2023-06-16 10:23:33.550 +01:00  INF]  Executing action method OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator) - Validation state: "Valid"
+[2023-06-16 10:23:33.554 +01:00  INF]  Executed action method OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 4.522ms.
+[2023-06-16 10:23:33.555 +01:00  INF]  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+[2023-06-16 10:23:33.556 +01:00  INF]  Executed action OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator) in 10.915ms
+[2023-06-16 10:23:33.556 +01:00  INF]  Executed endpoint 'OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator)'
+[2023-06-16 10:23:33.556 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/api/products/0 - - - 404 - application/problem+json;+charset=utf-8 21.3386ms
+[2023-06-16 10:23:34.922 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/api/products/0 - -
+[2023-06-16 10:23:34.922 +01:00  INF]  Executing endpoint 'OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator)'
+[2023-06-16 10:23:34.922 +01:00  INF]  Route matched with {action = "GetProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OptelDataGenerator.Product]] GetProduct(Int32) on controller OTelDataGenerator.Controllers.ProductsController (OTelDataGenerator).
+[2023-06-16 10:23:34.923 +01:00  INF]  Executing action method OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator) - Validation state: "Valid"
+[2023-06-16 10:23:34.923 +01:00  INF]  Executed action method OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 0.0161ms.
+[2023-06-16 10:23:34.923 +01:00  INF]  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+[2023-06-16 10:23:34.923 +01:00  INF]  Executed action OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator) in 0.9006ms
+[2023-06-16 10:23:34.923 +01:00  INF]  Executed endpoint 'OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator)'
+[2023-06-16 10:23:34.923 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/api/products/0 - - - 404 - application/problem+json;+charset=utf-8 1.5510ms
+[2023-06-16 10:25:15.254 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/api/products/0 - -
+[2023-06-16 10:25:15.254 +01:00  INF]  Executing endpoint 'OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator)'
+[2023-06-16 10:25:15.257 +01:00  INF]  Route matched with {action = "GetProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OptelDataGenerator.Product]] GetProduct(Int32) on controller OTelDataGenerator.Controllers.ProductsController (OTelDataGenerator).
+[2023-06-16 10:25:15.257 +01:00  INF]  Executing action method OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator) - Validation state: "Valid"
+[2023-06-16 10:25:15.266 +01:00  ERR]  product id cant to be zero
+[2023-06-16 10:25:15.266 +01:00  INF]  Executed action method OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 9.524ms.
+[2023-06-16 10:25:15.267 +01:00  INF]  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+[2023-06-16 10:25:15.267 +01:00  INF]  Executed action OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator) in 10.5632ms
+[2023-06-16 10:25:15.267 +01:00  INF]  Executed endpoint 'OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator)'
+[2023-06-16 10:25:15.267 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/api/products/0 - - - 404 - application/problem+json;+charset=utf-8 13.5641ms
+[2023-06-16 10:25:17.659 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/api/products/0 - -
+[2023-06-16 10:25:17.659 +01:00  INF]  Executing endpoint 'OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator)'
+[2023-06-16 10:25:17.659 +01:00  INF]  Route matched with {action = "GetProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[OptelDataGenerator.Product]] GetProduct(Int32) on controller OTelDataGenerator.Controllers.ProductsController (OTelDataGenerator).
+[2023-06-16 10:25:17.659 +01:00  INF]  Executing action method OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator) - Validation state: "Valid"
+[2023-06-16 10:25:17.660 +01:00  ERR]  product id cant to be zero
+[2023-06-16 10:25:17.660 +01:00  INF]  Executed action method OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 0.4388ms.
+[2023-06-16 10:25:17.660 +01:00  INF]  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+[2023-06-16 10:25:17.660 +01:00  INF]  Executed action OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator) in 1.1568ms
+[2023-06-16 10:25:17.660 +01:00  INF]  Executed endpoint 'OTelDataGenerator.Controllers.ProductsController.GetProduct (OTelDataGenerator)'
+[2023-06-16 10:25:17.660 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/api/products/0 - - - 404 - application/problem+json;+charset=utf-8 1.7203ms
+[2023-06-16 10:51:39.060 +01:00  INF]  Application is shutting down...

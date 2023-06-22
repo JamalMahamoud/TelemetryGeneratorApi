@@ -1,0 +1,29 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+processors:
+  batch:
+    timeout: 10s
+
+exporters:
+  zipkin:
+      endpoint: http://localhost:9411/api/v2/spans
+  jaeger: 
+      endpoint: http://localhost:16686/api/traces
+
+extensions:
+  health_check:
+  pprof:
+  zpages:
+
+service:
+  extensions: [health_check, pprof, zpages]
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [zipkin]
+

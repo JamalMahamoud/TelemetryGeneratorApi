@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Ds+jS++XhI6uRjeVHf87Epd0ZT9BhlE9onEKY0v+5PM=",
+  "Source": "OTelOnOpenShiftDemo",
+  "BasePath": "_content/OTelOnOpenShiftDemo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

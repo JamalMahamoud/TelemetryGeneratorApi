@@ -1,0 +1,32 @@
+[2023-06-20 13:31:24.548 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2023-06-20 13:31:24.591 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/swagger/index.html - -
+[2023-06-20 13:31:24.611 +01:00  INF]  Hosting environment: Development
+[2023-06-20 13:31:24.611 +01:00  INF]  Content root path: D:\TFSREPO\SRE\SRE_POCs\OTel\OTelOnOpenShiftDemo\OTelOnOpenShiftDemo\
+[2023-06-20 13:31:24.719 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/swagger/index.html - - - 200 - text/html;charset=utf-8 130.8995ms
+[2023-06-20 13:31:24.919 +01:00  INF]  Request starting HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - -
+[2023-06-20 13:31:25.011 +01:00  INF]  Request finished HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 91.8864ms
+[2023-06-20 13:40:32.595 +01:00  INF]  Application is shutting down...
+[2023-06-20 13:51:18.433 +01:00  INF]  Now listening on: https://localhost:7157
+[2023-06-20 13:51:18.638 +01:00  INF]  Now listening on: http://localhost:5253
+[2023-06-20 13:51:18.673 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2023-06-20 13:51:18.684 +01:00  INF]  Hosting environment: Development
+[2023-06-20 13:51:18.694 +01:00  INF]  Content root path: D:\TFSREPO\SRE\SRE_POCs\OTel\OTelOnOpenShiftDemo\OTelOnOpenShiftDemo\
+[2023-06-20 13:51:19.725 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7157/swagger - -
+[2023-06-20 13:51:19.924 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7157/swagger - - - 301 0 - 202.4505ms
+[2023-06-20 13:51:19.934 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7157/swagger/index.html - -
+[2023-06-20 13:51:20.339 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7157/swagger/swagger-ui-standalone-preset.js - -
+[2023-06-20 13:51:20.339 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7157/swagger/swagger-ui-bundle.js - -
+[2023-06-20 13:51:20.339 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7157/_framework/aspnetcore-browser-refresh.js - -
+[2023-06-20 13:51:20.342 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7157/swagger/index.html - - - 200 - text/html;charset=utf-8 408.6479ms
+[2023-06-20 13:51:20.346 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7157/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 7.0641ms
+[2023-06-20 13:51:20.372 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7157/_vs/browserLink - -
+[2023-06-20 13:51:20.443 +01:00  INF]  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[2023-06-20 13:51:20.444 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7157/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 104.3672ms
+[2023-06-20 13:51:20.457 +01:00  INF]  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[2023-06-20 13:51:20.458 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7157/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 118.1475ms
+[2023-06-20 13:51:20.548 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7157/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 176.3033ms
+[2023-06-20 13:51:20.706 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7157/swagger/v1/swagger.json - -
+[2023-06-20 13:51:20.731 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7157/swagger/favicon-32x32.png - -
+[2023-06-20 13:51:20.732 +01:00  INF]  Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[2023-06-20 13:51:20.732 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7157/swagger/favicon-32x32.png - - - 200 628 image/png 0.9199ms
+[2023-06-20 13:51:20.841 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7157/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 135.1822ms
