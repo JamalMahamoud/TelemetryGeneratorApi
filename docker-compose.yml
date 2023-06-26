@@ -1,19 +1,37 @@
 ﻿services:
-        
-#  otel-collector:
-#    image: otel/opentelemetry-collector-contrib
-#    command: [--config=/etc/otel-collector-config.yaml]
-#    volumes:
-#      - /d/VMs/podman/otel/otel-local-config.yaml:/etc/otel-collector-config.yaml
-#    ports:
-#      - 1888:1888 # pprof extension
-#      - 8888:8888 # Prometheus' metrics exposed by the collector
-#      - 8889:8889 # Prometheus exporter metrics
-#      - 13133:13133 # health_check extension
-#      - 4312:4317 # OTLP gRPC receiver
-#      - 4318:4318 # OTLP http receiver
-#      - 55679:55679 # zpages extension
-#    
+  
+  otel-collector:
+    container_name: otel-collector
+    image: otel/opentelemetry-collector-contrib
+    command: [--config=/etc/otel-collector-config.yaml]
+    volumes:
+      - ./otel/otel-local-config.yaml:/etc/otel-collector-config.yaml
+    ports:
+      - 4317:4317
+    depends_on:
+      - zipkin
+      - jaeger
+      - kafka
+
+  zipkin:
+    container_name: zipkin
+    image: openzipkin/zipkin
+    ports:
+      - 9411:9411
+    networks:
+      - local
+
+  jaeger:
+    container_name: jaeger
+    image: jaegertracing/all-in-one
+    ports:
+      - 16686:16686
+      - 14268:14268
+    networks:
+      - local
+    
+
+
   zookeeper:
     image: ubuntu/zookeeper:edge
     container_name: zookeeper
@@ -25,10 +43,10 @@
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-    network_mode: bridge
-      
-      
-
+    networks:
+      - local
+  
+  
   kafka:
     image: ubuntu/kafka:latest
     container_name: kafka
@@ -40,6 +58,8 @@
       - PGID=1000
     ports:
       - 9092:9092
+    networks:
+      - local
   #    volumes:
   #      - /mnt/MX500/AppData/kafka:/etc/kafka
 
@@ -48,10 +68,16 @@
     image: provectuslabs/kafka-ui:latest
     ports:
       - 8246:8080
+    networks:
+      - local
     environment:
       - DYNAMIC_CONFIG_ENABLED=true
       - TZ=Europe/London
       - PUID=1000
       - PGID=1000
     volumes:
-      - /d/VMs/podman/kafka-ui/config.yml:/etc/kafkaui/config.yml
+      - /Users/jamal/docker/kafka-ui/config.yaml:/etc/kafkaui/config.yml
+ 
+networks:
+    local:
+      driver: bridge

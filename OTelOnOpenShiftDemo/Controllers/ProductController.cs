@@ -10,12 +10,12 @@ namespace OTelDataGenerator.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly ILogger<ProductsController> _logger;
-        
+
         private static List<Product> _products = new()
         {
-            new() { Id = 1, Name = "Product A"},
-            new() { Id = 2, Name = "Product B"},
-            new() { Id = 3, Name = "Product C"}
+            new() { Id = 1, Name = "Product A" },
+            new() { Id = 2, Name = "Product B" },
+            new() { Id = 3, Name = "Product C" }
         };
 
         public ProductsController(ILogger<ProductsController> logger)
@@ -27,7 +27,7 @@ namespace OTelDataGenerator.Controllers
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
             var cancellationTokenSource = new CancellationTokenSource();
-            
+
             using var myActivity = OpenTelemetryConfig.ActivitySource.StartActivity("GetAllProducts");
 
             myActivity?.SetTag("Some custom tags", 1);
@@ -36,6 +36,7 @@ namespace OTelDataGenerator.Controllers
             {
                 cancellationTokenSource.Cancel();
             }
+
             try
             {
                 // Simulate a delay of 5 seconds
@@ -46,8 +47,8 @@ namespace OTelDataGenerator.Controllers
             {
                 myActivity?.SetStatus(ActivityStatusCode.Error, "user waited too long");
                 throw new Exception("The request timed out.");
-                
             }
+
             return Ok(_products);
         }
 
@@ -58,6 +59,7 @@ namespace OTelDataGenerator.Controllers
             {
                 _logger.LogError("product id cant to be zero");
             }
+
             var meter = new Meter(OpenTelemetryConfig.MeterName);
 
             var counter = meter.CreateCounter<int>("Requests");
@@ -97,5 +99,4 @@ namespace OTelDataGenerator.Controllers
             return NoContent();
         }
     }
-
 }

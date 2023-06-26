@@ -5,15 +5,24 @@ receivers:
       http:
       grpc:
         
+  filelog:
+    include: [ ./logs/webapi-20230626.json ]
+    operators:
+      - type: json_parser
+        timestamp:
+          parse_from: attributes.time
+          layout: '%Y-%m-%d %H:%M:%S'
+        
 exporters:
   logging:
     loglevel: debug
-    
-  jaeger:
-    endpoint: http://localhost:14250
-  
+
   zipkin:
-      endpoint: localhost:9411/api/v2/spans # Replace with your Zipkin endpoint URL
+    endpoint: "http://localhost:9413/api/v2/spans"
+  
+  jaeger:
+    endpoint: "http://localhost:14261/api/traces"
+  
   
   prometheus:
     endpoint: prometheus:8889
@@ -28,9 +37,13 @@ service:
   pipelines:
     traces:
       receivers: [otlp]
-      exporters: [logging,jaeger,zipkin]
+      exporters: [logging]
       processors: [batch]
     metrics:
       receivers: [otlp]
       exporters: [logging]
       processors: [batch]
+    logs:
+      receivers: [otlp,filelog]
+      exporters: [ logging]
+      processors: [ batch ]
