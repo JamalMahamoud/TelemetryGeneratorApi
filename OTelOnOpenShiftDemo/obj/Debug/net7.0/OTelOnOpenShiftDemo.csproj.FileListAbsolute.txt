@@ -57,7 +57,6 @@ D:/TFSREPO/SRE/SRE_POCs/OTel/OTelOnOpenShiftDemo/OTelOnOpenShiftDemo/obj/Debug/n
 D:/TFSREPO/SRE/SRE_POCs/OTel/OTelOnOpenShiftDemo/OTelOnOpenShiftDemo/obj/Debug/net7.0/ref/OTelOnOpenShiftDemo.dll
 D:/TFSREPO/SRE/SRE_POCs/OTel/OTelOnOpenShiftDemo/OTelOnOpenShiftDemo/bin/Debug/net7.0/OpenTelemetry.Exporter.Zipkin.dll
 D:/TFSREPO/SRE/SRE_POCs/OTel/OTelOnOpenShiftDemo/OTelOnOpenShiftDemo/bin/Debug/net7.0/OpenTelemetry.Instrumentation.Http.dll
-/Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/bin/Debug/net7.0/appsettings.Development.json
 /Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/bin/Debug/net7.0/appsettings.json
 /Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/bin/Debug/net7.0/OTelOnOpenShiftDemo
 /Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/bin/Debug/net7.0/OTelOnOpenShiftDemo.deps.json
@@ -116,3 +115,7 @@ D:/TFSREPO/SRE/SRE_POCs/OTel/OTelOnOpenShiftDemo/OTelOnOpenShiftDemo/bin/Debug/n
 /Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/obj/Debug/net7.0/OTelOnOpenShiftDemo.pdb
 /Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/obj/Debug/net7.0/OTelOnOpenShiftDemo.genruntimeconfig.cache
 /Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/obj/Debug/net7.0/ref/OTelOnOpenShiftDemo.dll
+/Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/bin/Debug/net7.0/Serilog.OpenTelemetry.dll
+/Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/bin/Debug/net7.0/Serilog.OpenTelemetry.LoggiaConsoleSink.dll
+/Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/bin/Debug/net7.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.dll

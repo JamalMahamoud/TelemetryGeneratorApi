@@ -1,64 +1,68 @@
 using OpenTelemetry.Exporter;
+using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using OptelDataGenerator;
 using Serilog;
+using Serilog.Sinks.OpenTelemetry;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
-    .Enrich.FromLogContext()
-    .CreateLogger();
+    .WriteTo.OpenTelemetry(opt =>
+    {
+        opt.Endpoint = "http://localhost:4317";
+    })
+     .WriteTo.Console()
+     .Enrich.FromLogContext()
+     .CreateLogger();
+
 // Add services to the container.
 var resource = ResourceBuilder.CreateDefault().AddService(OpenTelemetryConfig.ServiceName);
 //this will be attach to all the logs that goes out  
 
 builder.Services.AddControllers();
 builder.Logging.ClearProviders();
-builder.Logging.AddSerilog(logger);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-// add tracing
 builder.Services.AddOpenTelemetry()
-    .WithTracing(tracerProviderBuilder =>
-        tracerProviderBuilder
-            .AddSource(OpenTelemetryConfig.ActivitySource.Name)
-            .SetResourceBuilder(resource)
-            .AddAspNetCoreInstrumentation()
-            .AddOtlpExporter(
-                opt =>
-                {
-                    opt.Endpoint = new Uri("http://localhost:4317");
-                    opt.Protocol = OtlpExportProtocol.Grpc;
-                })
+    .WithTracing(b =>
+    {
+        b
             .AddConsoleExporter()
-    )
-
-    //add metrics
-    .WithMetrics(metricProviderBuilder =>
-        metricProviderBuilder
+            .AddSource(OpenTelemetryConfig.ServiceName)
             .SetResourceBuilder(resource)
-            .AddConsoleExporter()
-            .AddOtlpExporter()
-            .AddOtlpExporter(
-                opt =>
+            .AddOtlpExporter(otlpOptions =>
+            {
+                otlpOptions.Endpoint =
+                    new Uri(
+                        "http://<collector-address>:<port>"); // Specify the address and port of your OpenTelemetry Collector.
+            });
+    })
+    .WithMetrics(metricsProviderBuilder =>
+            metricsProviderBuilder
+                .AddMeter(OpenTelemetryConfig.Meter.Name)
+                .AddConsoleExporter()
+                .AddOtlpExporter(otlpOptions =>
                 {
-                    opt.Endpoint = new Uri("http://localhost:4312");
-                    opt.Protocol = OtlpExportProtocol.Grpc;
+                    otlpOptions.Endpoint =
+                        new Uri(
+                            "http://<collector-address>:<port>"); // Specify the address and port of your OpenTelemetry Collector.
                 })
-            //Meter name come from OpenTelemetryConfig.cs
-            .AddMeter(OpenTelemetryConfig.MeterName)
     );
-
-
-
-// builder.Logging.AddOpenTelemetry(options =>
-// {
-//     options.AddConsoleExporter();
-//     options.SetResourceBuilder(resource);
-// });
+    builder.Logging.AddOpenTelemetry(options =>
+    {
+        options.SetResourceBuilder(resource)
+            .AddConsoleExporter()
+            .AddOtlpExporter(otlpOptions =>
+            {
+                otlpOptions.Endpoint =
+                    new Uri(
+                        "http://<collector-address>:<port>"); // Specify the address and port of your OpenTelemetry Collector.
+            });
+    });
 
 
 var app = builder.Build();

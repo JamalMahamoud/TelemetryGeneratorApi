@@ -26,29 +26,25 @@ namespace OTelDataGenerator.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
-            var cancellationTokenSource = new CancellationTokenSource();
-
             using var myActivity = OpenTelemetryConfig.ActivitySource.StartActivity("GetAllProducts");
-
-            myActivity?.SetTag("Some custom tags", 1);
+            
+            var cancellationTokenSource = new CancellationTokenSource();
+            myActivity?.SetTag("Some custom tags keys", 1);
             myActivity?.AddEvent(new ActivityEvent("Getting products"));
             if (_products.Count > 3)
             {
                 cancellationTokenSource.Cancel();
             }
-
             try
             {
                 // Simulate a delay of 5 seconds
                 await Task.Delay(TimeSpan.FromSeconds(_products.Count), cancellationTokenSource.Token);
-                _logger.LogInformation($"Delaying {_products.Count}");
             }
             catch (OperationCanceledException)
             {
                 myActivity?.SetStatus(ActivityStatusCode.Error, "user waited too long");
                 throw new Exception("The request timed out.");
             }
-
             return Ok(_products);
         }
 
@@ -59,12 +55,10 @@ namespace OTelDataGenerator.Controllers
             {
                 _logger.LogError("product id cant to be zero");
             }
-
-            var meter = new Meter(OpenTelemetryConfig.MeterName);
-
-            var counter = meter.CreateCounter<int>("Requests");
-            var histogram = meter.CreateHistogram<float>("RequestDuration", unit: "ms");
-            meter.CreateObservableGauge("ThreadCount", () => new[] { new Measurement<int>(ThreadPool.ThreadCount) });
+            
+            var counter = OpenTelemetryConfig.Meter.CreateCounter<int>("Requests");
+            var histogram = OpenTelemetryConfig.Meter.CreateHistogram<float>("RequestDuration", unit: "ms");
+            OpenTelemetryConfig.Meter.CreateObservableGauge("ThreadCount", () => new[] { new Measurement<int>(ThreadPool.ThreadCount) });
 
             // Measure the number of requests
             counter.Add(1, KeyValuePair.Create<string, object?>("name", "GetProduct"));
@@ -80,9 +74,22 @@ namespace OTelDataGenerator.Controllers
         [HttpPost("productName")]
         public ActionResult<Product> AddProduct(Product product)
         {
-            product.Id = _products.Count + 1;
-            _products.Add(product);
+            using var myActivity = OpenTelemetryConfig.ActivitySource.StartActivity("AddProducts");
+            myActivity?.SetTag(OpenTelemetryConfig.AddedProductId, product.Id);
+            myActivity?.SetTag(OpenTelemetryConfig.AddedProductName, product.Name);
 
+            try
+            {
+                myActivity?.AddEvent(new ActivityEvent("Trying to add product"));
+                product.Id = _products.Count + 1;
+                _products.Add(product);
+                myActivity?.AddEvent(new ActivityEvent("Product Added"));
+            }
+            catch (Exception e)
+            {
+                myActivity?.SetStatus(ActivityStatusCode.Error, "Here is what went wrong {e}");
+                throw;
+            }
             return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
         }
 
