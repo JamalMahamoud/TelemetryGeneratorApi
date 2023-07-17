@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ln0gR94EyYnTGcY2R3tLpdPks7iC7nMgmGvMYMEOo5j6kvAGBfP1rQClAkXlU1Kjm+xkppYyXyVscSIvxf6Fig==",
+  "dgSpecHash": "k8599LiWazhLbVB6uhgdL1ThzFOxjMawZLNL8sM7GtI9O4mJLfn97VX0WFeaiFA2BtcRsmneVwv7c4WfIabRDg==",
   "success": true,
   "projectFilePath": "/Users/jamal/Documents/CodeLand/dotNetproject/TelemetryGeneratorApi/OTelOnOpenShiftDemo/OTelOnOpenShiftDemo.csproj",
   "expectedPackageFiles": [

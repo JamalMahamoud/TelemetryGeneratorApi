@@ -9,15 +9,7 @@ using Serilog.Sinks.OpenTelemetry;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var logger = new LoggerConfiguration()
-    .ReadFrom.Configuration(builder.Configuration)
-    .WriteTo.OpenTelemetry(opt =>
-    {
-        opt.Endpoint = "http://localhost:4317";
-    })
-     .WriteTo.Console()
-     .Enrich.FromLogContext()
-     .CreateLogger();
+
 
 // Add services to the container.
 var resource = ResourceBuilder.CreateDefault().AddService(OpenTelemetryConfig.ServiceName);
@@ -34,34 +26,21 @@ builder.Services.AddOpenTelemetry()
             .AddConsoleExporter()
             .AddSource(OpenTelemetryConfig.ServiceName)
             .SetResourceBuilder(resource)
-            .AddOtlpExporter(otlpOptions =>
-            {
-                otlpOptions.Endpoint =
-                    new Uri(
-                        "http://<collector-address>:<port>"); // Specify the address and port of your OpenTelemetry Collector.
-            });
+            .AddJaegerExporter()
+            .AddZipkinExporter()
+            .AddOtlpExporter();
     })
     .WithMetrics(metricsProviderBuilder =>
             metricsProviderBuilder
                 .AddMeter(OpenTelemetryConfig.Meter.Name)
                 .AddConsoleExporter()
-                .AddOtlpExporter(otlpOptions =>
-                {
-                    otlpOptions.Endpoint =
-                        new Uri(
-                            "http://<collector-address>:<port>"); // Specify the address and port of your OpenTelemetry Collector.
-                })
+                .AddOtlpExporter()
     );
     builder.Logging.AddOpenTelemetry(options =>
     {
         options.SetResourceBuilder(resource)
             .AddConsoleExporter()
-            .AddOtlpExporter(otlpOptions =>
-            {
-                otlpOptions.Endpoint =
-                    new Uri(
-                        "http://<collector-address>:<port>"); // Specify the address and port of your OpenTelemetry Collector.
-            });
+            .AddOtlpExporter();
     });
 
 
